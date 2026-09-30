@@ -62,7 +62,7 @@ def delete_event(event_id):
         if event.id == event_id:
             events.remove(event)
             return "", 204
-        return jsonify({"error": "Event not found"}), 404
+    return jsonify({"error": "Event not found"}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)            
